@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Public+Sans:ital,wght@0,400;0,800;1,300&family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* O asterisco serve para estilizar todos os elemntos da página */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    /* retira o sublinhado */
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CABEÇALHO */
+.logo .imagem{
+    width: 100px;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 624px){
+    .cabecalho{
+        justify-content: center;
+    }
+
+    .cabecalho .logo{
+        margin-bottom: 30px;
+    }
+
+    .cabecalho .menu .item a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .titulo{
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.logo .titulo:hover{
+    color: #1ed760;
+}
+
+.cabecalho .navegacao .menu{
+    display: flex;
+}
+
+.cabecalho .navegacao .menu .item a{
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.cabecalho .navegacao .menu .item a:hover{
+    background-color: #1ed760;
+    color: whitesmoke;
+}
+/* CABEÇALHO */
+
+/* CONTEÚDO */
+.conteudo-principal .paineis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+@media(max-width: 900px){
+    .conteudo-principal .paineis{
+        height: 500px;
+    }
+}
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(85%);
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.conteudo-principal .paineis .projeto1{
+    background-image: url('../imagens/painel1.jpg');
+}
+
+.conteudo-principal .paineis .projeto2{
+    background-image: url('../imagens/painel2.jpg');
+}
+
+.conteudo-principal .paineis .projeto3{
+    background-image: url('../imagens/painel3.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar {
+    opacity: 1;
+}
+.conteudo-principal .paineis .titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vm);
+}
+
+.conteudo-principal .paineis .seta{
+    background-image: url(../imagens/seta.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.conteudo-principal .paineis .seta.btn-voltar{
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.conteudo-principal .paineis .seta.btn-avancar{
+    right: 20px;
+}
+/* CONTEÚDO */
+
+/*  quem sou eu */
+.quem-sou-eu {
+    background-color: #2941ab;
+}
+
+.quem-sou-eu .conteudo{
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.quem-sou-eu .conteudo .informacoes{
+    width: 40%;
+}
+
+.quem-sou-eu .conteudo .imagem{
+    width: 60%;
+}
+
+@media(max-width: 1200px){
+    .quem-sou-eu .conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 30px;
+    }
+
+    .quem-sou-eu .conteudo .imagem{
+        display: none;
+    }
+
+    .quem-sou-eu .conteudo .informacoes{
+        width: 100%;
+    }
+}
+
+.quem-sou-eu.conteudo .informacoes .titulo{
+    font-size: 50px;
+    color: #1ed760;
+    margin-bottom: 20px;
+}
+
+.quem-sou-eu .conteudo .informacoes .texto{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* RODAPÉ */
+.rodape {
+    padding: 80px 0 20px 0;
+}
+
+.rodape .navegacao{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rodape .navegacao .logo .imagem{
+    width: 100px;
+}
+
+.rodape .redes-sociais{
+    display: flex;
+}
+
+.rodape .redes-sociais a{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 25px;
+    border: 1px solid #111;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .redes-sociais a:hover{
+    background-color: #1ed760;
+}
+
+.rodape .copyrigth{
+    margin-top: 70px;
+    text-align: center;
+}
+@media(max-width: 940px){
+    .rodape .navegacao{
+        justify-content: center;
+    }
+    .rodape .navegacao .logo{
+        margin-bottom: 30px;
+    }
+
+    .rodape .navegacao .logo, .redes-sociais{
+        width: 100%;
+        justify-content: center;
+    }
+}
